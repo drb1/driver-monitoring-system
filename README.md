@@ -67,3 +67,5 @@ python3 src/realtime.py --model_path outputs/models/best_lstm.keras --seq_len 16
 python3 src/inspect_trainables.py --model tcn
 python3 src/inspect_trainables.py --model lstm
 python3 src/inspect_trainables.py --model transformer
+
+### next version
