@@ -1,0 +1,66 @@
+# --- OS / Editor ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# --- Jupyter ---
+*.ipynb
+
+# --- Node (if any utilities) ---
+node_modules/
+
+# --- Logs / temp ---
+*.log
+*.tmp
+tmp/
+temp/
+
+# --- Data (IMPORTANT: keep splits, ignore raw videos by default) ---
+data/raw/
+data/processed/
+data/processed_audio_mels/
+data/**/.DS_Store
+
+# Keep your split CSVs tracked
+!data/splits/
+!data/splits/train.csv
+!data/splits/val.csv
+!data/splits/test.csv
+
+# --- Outputs / models / metrics / plots ---
+outputs/
+!outputs/.gitkeep
+
+# --- Keras / TF artifacts ---
+*.keras
+*.h5
+*.ckpt
+*.pb
+saved_model/
+keras_tuner/
+wandb/
+
+# --- Audio / video artifacts ---
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.npy
+*.npz
+
+# --- Mac-specific / FFmpeg ---
+*.mov
