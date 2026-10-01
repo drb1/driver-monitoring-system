@@ -30,10 +30,6 @@ tmp/
 temp/
 
 # --- Data (IMPORTANT: keep splits, ignore raw videos by default) ---
-data/raw/
-data/processed/
-data/processed_audio_mels/
-data/**/.DS_Store
 
 # Keep your split CSVs tracked
 !data/splits/
