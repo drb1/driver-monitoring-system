@@ -69,3 +69,18 @@ python3 src/inspect_trainables.py --model lstm
 python3 src/inspect_trainables.py --model transformer
 
 ### next version
+# evaluate
+python src/evaluation_fusion.py \
+  --model_path outputs/models/best_fusion_tcn.keras \
+  --test_csv data/splits/test.csv \
+  --seq_len 16 --img_size 224 --batch 8 --tta 1
+
+# train
+python src/build_audio_cache.py
+python src/training.py --model tcn --multimodal --fusion_base tcn --epochs 30 --batch 8
+# inspect prediction
+python src/inspect_fusion_preds.py
+# identify silenced audio clips
+python src/find_silent_audio_clips.py
+# Check if audio branch is overpowering video branch
+python src/ablate_audio_on_mistakes.py
